@@ -1,5 +1,13 @@
 @extends('layouts.main')
 @section('content')
-<h1>Home Page</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1>Home Page</h1>
+
+@if(session('successMsg'))
+<div class="alert alert-success" role="alert">
+    {{ session('successMsg') }}
+</div>
+@endif
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 @endsection
