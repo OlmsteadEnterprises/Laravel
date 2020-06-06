@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Students;
 use Illuminate\Http\Request;
+use function GuzzleHttp\Promise\all;
 
 class StudentController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $students = Students::all();
+        return view('welcome', compact('students'));
     }
     public function create()
     {
